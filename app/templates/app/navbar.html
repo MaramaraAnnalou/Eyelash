@@ -1,0 +1,13 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<div class="nav">
+<header>
+
+    <a href="{% url 'Home'%}">Home</a>
+    <a href="{% url 'About' %}">About</a>
+    <a href="{% url 'AppointmentList'%}">Appointment</a>
+    <a href="{% url 'login' %}">Log In</a>
+    <a href="{% url 'signup' %}">SingUp</a>
+
+</header>
+</div>

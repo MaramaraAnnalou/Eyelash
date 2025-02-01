@@ -1,0 +1,116 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+<center>
+
+<h2>SignUp</h2>
+<form method="post">
+
+    {% csrf_token %}
+    <style>
+        {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Sign-up form container */
+form {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+/* Form heading */
+h2 {
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Button styling */
+button {
+    background-color: #E5989B;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #218838;
+}
+
+/* Form labels */
+label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #555555;
+    font-size: 14px;
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+    form {
+        width: 90%;
+    }
+}
+    </style>
+    <div>
+        <label for="username">Username</label>
+        <input type="text" placeholder="Enter your username" name="username" required>
+        <br>
+        <br>
+        <label for="password1">Password</label>
+        <input type="password" placeholder="Enter your password" name="password1" required>
+        <br>
+        <br>
+        <label for="password2">Password</label>
+        <input type="password" placeholder="Re-enter your password" name="password2" required>
+         <br>
+
+    </div>
+         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+    <button type="submit">Sign Up</button>
+</form>
+    </center>
+{% endblock content %}

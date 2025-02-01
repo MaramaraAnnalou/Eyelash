@@ -1,0 +1,15 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+    <a href="{% url 'AppointmentCreate' %}">+ New Appointment</a>
+    {% for appointment in appointment_list %}
+      <div class="user-entry">
+          <h2><a href="{% url 'AppointmentDetail' appointment.pk %}">{{appointment.user}}</a></h2>
+          <p>{{appointment.body}}</p>
+
+          <img src ="{{appointment.profile_picture}}">
+
+
+      </div>
+    {% endfor %}
+{% endblock content %}

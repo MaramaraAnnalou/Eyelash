@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    {% include 'app/navbar.html' %}
+    {% if user.is_authenticated %}
+    <p>Hi {{user.username}}</p>
+    <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit">Log out</button>
+    </form>
+    {% else %}
+    <p>You are not Logged in</p>
+
+    {% endif %}
+
+    {% block content %}
+
+    {% endblock content %}
+    <script src="{% static 'js/base.js' %}"></script>
+</body>
+</html>
